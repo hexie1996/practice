@@ -1,0 +1,11 @@
+a = input()
+ls = []
+for i in range(a):
+    ls.append(input())
+for j in range(a):
+    temp_string = ls[j]
+    for k in range(len(temp_string)):
+        if k>=2:
+            if temp_string[k]==temp_string[k-1] and temp_string[k-1]==temp_string[k-2]:
+                temp_string.pop(k)
+
