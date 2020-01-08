@@ -27,11 +27,9 @@ class Solution(object):
                         ptr_p=ptr_p+1
                         continue
                     elif(s[ptr_s]==p[ptr_p+1] or p[ptr_p+1]=='?'):
-                        #if(Solution.isMatch(self,s[ptr_s+1:],p[ptr_p+2:])==True):
-                            #return True
-                        ptr_s = ptr_s + 1
-                        ptr_p = ptr_p + 1
-                        break
+                        if(Solution.isMatch(self,s[ptr_s+1:],p[ptr_p+2:])==True):
+                            return True
+
                     if(ptr_s==len(s)-1):
                         return False
                     else:
